@@ -1,4 +1,10 @@
 class CreateProducts < ActiveRecord::Migration[7.2]
+
+  belongs_to :category
+
+  has_many :order_items
+  has_many :orders, through: :order_items
+
   def change
     create_table :products do |t|
       t.string :name

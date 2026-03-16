@@ -1,6 +1,6 @@
 class CreateCategories < ActiveRecord::Migration[7.2]
 
-  has_many :products
+  
   def change
     create_table :categories do |t|
       

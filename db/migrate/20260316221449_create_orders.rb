@@ -1,8 +1,5 @@
 class CreateOrders < ActiveRecord::Migration[7.2]
 
-  belongs_to :customer
-  has_many :order_items, dependent: :destroy
-  has_many :products, through: :order_items
 
   def change
     create_table :orders do |t|

@@ -1,7 +1,5 @@
 class CreateCustomers < ActiveRecord::Migration[7.2]
-  has_secure_password
-  has_many :orders
-
+  
   def change
     create_table :customers do |t|
       t.string :first_name
